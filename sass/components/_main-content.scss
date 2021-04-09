@@ -1,0 +1,171 @@
+main {
+  .pleasure {
+    .gifts {
+      .item {
+        background-size: cover;
+        border: 2px solid $first-color;
+        color: white;
+        filter: none;
+        height: 170px;
+        text-decoration: none;
+        transition: $transition;
+
+        div {
+          background-color: rgba($first-color, 0.7);
+          filter: none;
+          padding: 5px;
+        }
+
+        &:hover {
+          text-decoration: none;
+          filter: grayscale(0.7);
+        }
+
+        &.cheque {
+          background-image: url("images/photo-cheque.JPG");
+        }
+
+        &.coffret {
+          background-image: url("images/photo-coffret.JPG");
+        }
+      }
+    }
+  }
+
+  .engagements {
+    .item {
+      img {
+        display: block;
+        height: 230px;
+        margin: 0 auto;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      p {
+        margin-top: 1rem;
+        text-align: center;
+      }
+    }
+  }
+
+  &.page-vins {
+    .wine-header {
+      height: 300px;
+      object-fit: cover;
+      width: 100%;
+      @media screen and(max-width: 768px) {
+        height: 150px;
+      }
+    }
+
+    ul {
+      column-count: 2;
+      padding-left: 15px;
+      @media screen and(max-width: 768px) {
+        column-count: 1;
+      }
+
+      li {
+        padding: 10px 5px;
+      }
+    }
+
+    .blancs {
+      li {
+        &::marker {
+          color: $color-white-wine;
+        }
+      }
+    }
+
+    .roses {
+      li {
+        &::marker {
+          color: $color-rose-wine;
+        }
+      }
+    }
+
+    .rouges {
+      li {
+        &::marker {
+          color: $color-red-wine;
+        }
+      }
+    }
+
+    .champagnes {
+      li {
+        &::marker {
+          color: $color-white-wine;
+        }
+      }
+    }
+  }
+
+  &.page-contact {
+    .contact-form {
+      .wpcf7 {
+        width: 100%;
+        label {
+          width: 100%;
+          input, textarea {
+            border: none;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            outline: none;
+            padding: 0.3rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &.page-mets {
+    .plats {
+      @media screen and (max-width: 768px) {
+        display: flex;
+        order: 2;
+      }
+      img {
+        width: 100%;
+        @media screen and (max-width: 768px) {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      img:first-of-type {
+        margin-bottom: 10px;
+        @media screen and (max-width: 768px) {
+          margin-right: 10px;
+        }
+      }
+    }
+    .intitules {
+      @media screen and (max-width: 768px) {
+        order: 1;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        @media screen and (max-width: 768px) {
+          height: unset;
+          margin: 10px 0;
+        }
+        li {
+          padding: 20px 0;
+          text-align: center;
+          width: 50%;
+          @media screen and (max-width: 992px) {
+            width: 75%;
+          }
+        }
+        li:not(:last-of-type) {
+          border-bottom: 1px solid $first-color;
+        }
+      }
+    }
+  }
+
+}

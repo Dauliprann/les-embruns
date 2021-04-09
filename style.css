@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Les Embruns
 Author: Jennifer A
@@ -19,6 +20,444 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 /*--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+html, body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.white {
+  color: white;
+}
+
+a {
+  color: #6d071a;
+  text-decoration: underline;
+  transition: 0.3s ease all;
+}
+a:hover {
+  color: #37030D;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 630px) {
+  .deco {
+    position: relative;
+  }
+  .deco:after {
+    background: url("images/logo_small.png") no-repeat;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 120px;
+    opacity: 0.6;
+    position: absolute;
+    right: -60px;
+    transform: rotate(7deg);
+    width: 121px;
+  }
+}
+.bg-red {
+  background-color: rgba(109, 7, 26, 0.15);
+}
+
+button, input[type=submit], a.button {
+  background-color: #6d071a;
+  border: 2px solid #6d071a;
+  border-radius: 0 !important;
+  color: white;
+  cursor: pointer;
+  font-family: "PT Serif", serif;
+  font-size: 22px;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: 0.3s ease all;
+}
+@media screen and (max-width: 768px) {
+  button, input[type=submit], a.button {
+    font-size: 19px;
+    padding: 5px 10px;
+  }
+}
+button.white, input[type=submit].white, a.button.white {
+  background-color: white;
+  border-color: #6d071a;
+  color: #6d071a;
+}
+button.white:hover, input[type=submit].white:hover, a.button.white:hover {
+  background-color: #6d071a;
+  border-color: white;
+  color: white;
+}
+button:hover, input[type=submit]:hover, a.button:hover {
+  background-color: white;
+  color: #6d071a;
+}
+
+.title, .title_h4, .title_h3, .title_h2 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.title_h2 {
+  font-family: "PT Serif", serif;
+}
+.title_h2:before {
+  background-color: #6d071a;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  transition: 0.3s ease all;
+  vertical-align: middle;
+  width: 30px;
+}
+.title_h2:hover:before {
+  transform: scaleX(1.2);
+}
+.title_h2.text-center:before {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.title_h3 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.title_h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+.title_h4 i {
+  color: #b50c2b;
+  padding-right: 10px;
+  transition: 0.3s ease all;
+}
+.title_h4:hover i {
+  transform: rotate(-10deg) scale(1.2);
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+footer {
+  background-color: #37030D;
+  padding: 1rem 0;
+}
+footer a {
+  color: white;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s ease all;
+  width: -webkit-max-content;
+  width: max-content;
+}
+footer a:hover {
+  color: inherit;
+  opacity: 0.7;
+}
+footer a .fa {
+  cursor: pointer;
+  font-size: 30px;
+  padding: 1rem 0;
+}
+footer .contact-footer {
+  margin-bottom: 1rem;
+}
+footer .contact-footer p {
+  margin-bottom: 0;
+}
+footer .mentions-footer {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+footer .mentions-footer li {
+  padding: 0 1rem;
+}
+footer .mentions-footer li a {
+  color: white;
+  text-decoration: underline;
+}
+footer .mentions-footer li:first-of-type {
+  border-right: 1px solid white;
+}
+@media screen and (max-width: 768px) {
+  footer .mentions-footer li:first-of-type {
+    border: none;
+  }
+}
+
+header {
+  background-color: white;
+  box-shadow: -1px 10px 30px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -1px 10px 30px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -1px 10px 30px 1px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+header h1 {
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  header h1 {
+    max-height: 45px;
+  }
+}
+header .navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header .navbar ul li a {
+  color: #6d071a;
+  text-decoration: none;
+  transition: 0.3s ease all;
+}
+header .navbar ul li a:after {
+  content: "";
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-size: 13px;
+  opacity: 0;
+  transition: 0.3s ease all;
+}
+header .navbar ul li:hover a:after {
+  opacity: 1;
+  transform: translateX(5px);
+}
+header .navbar ul li.link-booking {
+  background-color: #6d071a;
+  padding: 10px 15px;
+}
+header .navbar ul li.link-booking a {
+  color: white;
+}
+
+main .pleasure .gifts .item {
+  background-size: cover;
+  border: 2px solid #6d071a;
+  color: white;
+  filter: none;
+  height: 170px;
+  text-decoration: none;
+  transition: 0.3s ease all;
+}
+main .pleasure .gifts .item div {
+  background-color: rgba(109, 7, 26, 0.7);
+  filter: none;
+  padding: 5px;
+}
+main .pleasure .gifts .item:hover {
+  text-decoration: none;
+  filter: grayscale(0.7);
+}
+main .pleasure .gifts .item.cheque {
+  background-image: url("images/photo-cheque.JPG");
+}
+main .pleasure .gifts .item.coffret {
+  background-image: url("images/photo-coffret.JPG");
+}
+main .engagements .item img {
+  display: block;
+  height: 230px;
+  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
+}
+main .engagements .item p {
+  margin-top: 1rem;
+  text-align: center;
+}
+main.page-vins .wine-header {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  main.page-vins .wine-header {
+    height: 150px;
+  }
+}
+main.page-vins ul {
+  column-count: 2;
+  padding-left: 15px;
+}
+@media screen and (max-width: 768px) {
+  main.page-vins ul {
+    column-count: 1;
+  }
+}
+main.page-vins ul li {
+  padding: 10px 5px;
+}
+main.page-vins .blancs li::marker {
+  color: #FFD359;
+}
+main.page-vins .roses li::marker {
+  color: #DB7093;
+}
+main.page-vins .rouges li::marker {
+  color: #6D071A;
+}
+main.page-vins .champagnes li::marker {
+  color: #FFD359;
+}
+main.page-contact .contact-form .wpcf7 {
+  width: 100%;
+}
+main.page-contact .contact-form .wpcf7 label {
+  width: 100%;
+}
+main.page-contact .contact-form .wpcf7 label input, main.page-contact .contact-form .wpcf7 label textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  outline: none;
+  padding: 0.3rem;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  main.page-mets .plats {
+    display: flex;
+    order: 2;
+  }
+}
+main.page-mets .plats img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  main.page-mets .plats img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+main.page-mets .plats img:first-of-type {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  main.page-mets .plats img:first-of-type {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main.page-mets .intitules {
+    order: 1;
+  }
+}
+main.page-mets .intitules ul {
+  list-style: none;
+  padding-left: 0;
+}
+@media screen and (max-width: 768px) {
+  main.page-mets .intitules ul {
+    height: unset;
+    margin: 10px 0;
+  }
+}
+main.page-mets .intitules ul li {
+  padding: 20px 0;
+  text-align: center;
+  width: 50%;
+}
+@media screen and (max-width: 992px) {
+  main.page-mets .intitules ul li {
+    width: 75%;
+  }
+}
+main.page-mets .intitules ul li:not(:last-of-type) {
+  border-bottom: 1px solid #6d071a;
+}
+
+.top-banner {
+  margin-top: 65px;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .top-banner {
+    margin-top: 0;
+  }
+}
+.top-banner.home {
+  height: 85vh;
+}
+@media screen and (max-width: 768px) {
+  .top-banner.home {
+    height: 50vh;
+  }
+}
+.top-banner .bg-img {
+  height: 100%;
+  width: 100%;
+}
+.top-banner.page {
+  height: 30vh;
+}
+@media screen and (max-width: 768px) {
+  .top-banner.page {
+    height: 20vh;
+  }
+}
+.top-banner.page.-resto .bg-img {
+  background: url("images/photo-top-banner-resto.jpg") center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.top-banner.page.-mets .bg-img {
+  background: url("images/photo-top-banner-mets.JPG") center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.top-banner.page.-vins .bg-img {
+  background: url("images/photo-top-banner-vins.jpg") center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.top-banner .overlay-red {
+  background-color: rgba(109, 7, 26, 0.7);
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+.top-banner .txt-content {
+  color: white;
+  font-family: "PT Serif", serif;
+  font-size: 62px;
+  position: relative;
+  z-index: 15;
+}
+.top-banner .txt-content .content {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  cursor: default;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .top-banner .txt-content .content {
+    font-size: 45px;
+  }
+}
+
 /* Generic --------------------------------------------- */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -28,7 +467,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
+  line-height: 1.6rem !important;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -155,21 +594,6 @@ img {
 
 /* Forms
 	 ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-}
-
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -340,23 +764,4 @@ template {
 
 html {
   box-sizing: border-box;
-}
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  clear: both;
-}
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-body {
-  background-color: red;
 }

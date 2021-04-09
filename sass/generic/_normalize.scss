@@ -9,7 +9,7 @@
  */
 
 html {
-	line-height: 1.15;
+	line-height: 1.6rem !important;
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -151,22 +151,6 @@ img {
 
 /* Forms
 	 ========================================================================== */
-
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	font-family: inherit;
-	font-size: 100%;
-	line-height: 1.15;
-	margin: 0;
-}
 
 /**
  * Show the overflow in IE.

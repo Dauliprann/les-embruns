@@ -10,25 +10,35 @@
  */
 
 ?>
+</main>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'les-embruns' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'les-embruns' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'les-embruns' ), 'les-embruns', '<a href="http://underscores.me/">Jennifer A</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer>
+    <div class="container text-center white">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_small_white.png" alt="Logo pied de page">
+        <a href="https://www.facebook.com/lesembrunsiledere/"><i class="fa fa-facebook"></i></a>
+        <div class="contact-footer">
+            <p>Restaurant Les Embruns</p>
+            <p>6 Rue Chay Morin 17410 Saint-Martin-de-Ré</p>
+            <p>05 46 66 46 31</p>
+        </div>
+        <?php wp_nav_menu(array(
+            'theme_location' => 'menu-footer',
+            'menu_class' => 'mentions-footer d-md-flex justify-content-center',
+        )); ?>
+    </div>
+</footer>
 
 <?php wp_footer(); ?>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.title_h2 {
+  @extend .title;
+  font-family: $font-title;
+
+  &:before {
+    background-color: $first-color;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    margin-right: 10px;
+    transition: $transition;
+    vertical-align: middle;
+    width: 30px;
+  }
+
+  &:hover {
+    &:before {
+      transform: scaleX(1.2);
+    }
+  }
+
+  &.text-center {
+    &:before {
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+  }
+}
+
+.title_h3 {
+  @extend .title;
+  font-family: $font-family;
+  text-transform: uppercase;
+}
+
+.title_h4 {
+  @extend .title;
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 20px;
+
+  i {
+    color: $first-color-light;
+    padding-right: 10px;
+    transition: $transition;
+  }
+
+  &:hover {
+    i {
+      transform: rotate(-10deg) scale(1.2);
+    }
+  }
+}

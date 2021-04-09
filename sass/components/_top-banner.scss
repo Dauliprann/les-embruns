@@ -1,0 +1,79 @@
+.top-banner {
+  margin-top: 65px;
+  position: relative;
+  @media screen and(max-width: 992px) {
+    margin-top: 0;
+  }
+
+  &.home {
+    height: 85vh;
+    @media screen and(max-width: 768px) {
+      height: 50vh;
+    }
+  }
+  .bg-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  &.page {
+    height: 30vh;
+    @media screen and (max-width: 768px) {
+      height: 20vh;
+    }
+
+    &.-resto {
+      .bg-img {
+        background: url("images/photo-top-banner-resto.jpg") center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &.-mets {
+      .bg-img {
+        background: url("images/photo-top-banner-mets.JPG") center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &.-vins {
+      .bg-img {
+        background: url("images/photo-top-banner-vins.jpg") center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .overlay-red {
+    background-color: rgba($first-color, 0.7);
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .txt-content {
+    color: white;
+    font-family: "PT Serif", serif;
+    font-size: 62px;
+    position: relative;
+    z-index: 15;
+
+    .content {
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      cursor: default;
+      line-height: 1.5;
+      @media screen and(max-width: 768px) {
+        font-size: 45px;
+      }
+    }
+  }
+}

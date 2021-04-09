@@ -1,0 +1,53 @@
+footer {
+  background-color: $first-color-dark;
+  padding: 1rem 0;
+
+  a {
+    color: white;
+    display: block;
+    margin: 0 auto;
+    transition: $transition;
+    width: max-content;
+
+    &:hover {
+      color: inherit;
+      opacity: 0.7;
+    }
+
+    .fa {
+      cursor: pointer;
+      font-size: 30px;
+      padding: 1rem 0;
+    }
+  }
+
+  .contact-footer {
+    margin-bottom: 1rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .mentions-footer {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+      padding: 0 1rem;
+
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+
+    li:first-of-type {
+      border-right: 1px solid white;
+      @media screen and (max-width: 768px) {
+        border: none;
+      }
+    }
+  }
+}

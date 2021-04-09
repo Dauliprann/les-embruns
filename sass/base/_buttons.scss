@@ -1,0 +1,33 @@
+button, input[type="submit"], a.button {
+  background-color: $first-color;
+  border: 2px solid $first-color;
+  border-radius: 0 !important;
+  color: white;
+  cursor: pointer;
+  font-family: $font-title;
+  font-size: 22px;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: $transition;
+  @media screen and(max-width: 768px) {
+    font-size: 19px;
+    padding: 5px 10px;
+  }
+
+  &.white {
+    background-color: white;
+    border-color: $first-color;
+    color: $first-color;
+
+    &:hover {
+      background-color: $first-color;
+      border-color: white;
+      color: white;
+    }
+  }
+
+  &:hover {
+    background-color: white;
+    color: $first-color;
+  }
+}
