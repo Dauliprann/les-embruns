@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import "bootstrap.css";
 html, body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -70,6 +71,10 @@ img {
   background-color: rgba(109, 7, 26, 0.15);
 }
 
+.mobmenu-content li:active {
+  border-bottom: 1px solid #6d071a !important;
+}
+
 button, input[type=submit], a.button {
   background-color: #6d071a;
   border: 2px solid #6d071a;
@@ -98,7 +103,7 @@ button.white:hover, input[type=submit].white:hover, a.button.white:hover {
   border-color: white;
   color: white;
 }
-button:hover, input[type=submit]:hover, a.button:hover {
+button:hover, button:active, button:focus, input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus, a.button:hover, a.button:active, a.button:focus {
   background-color: white;
   color: #6d071a;
 }
@@ -152,6 +157,19 @@ button:hover, input[type=submit]:hover, a.button:hover {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+.contact_form label {
+  max-width: 100%;
+  width: 100%;
+}
+.contact_form label input, .contact_form label textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  max-width: 100%;
+  padding: 5px;
+  width: 100%;
+}
+
 footer {
   background-color: #37030D;
   padding: 1rem 0;
@@ -243,10 +261,16 @@ header .navbar ul li:hover a:after {
 }
 header .navbar ul li.link-booking {
   background-color: #6d071a;
-  padding: 10px 15px;
+  padding: 10px;
 }
 header .navbar ul li.link-booking a {
   color: white;
+}
+header .navbar ul li.link-booking a:after {
+  display: none;
+}
+header .navbar ul li.link-booking:hover {
+  background-color: #37030D;
 }
 
 main .pleasure .gifts .item {
@@ -284,39 +308,32 @@ main .engagements .item p {
   margin-top: 1rem;
   text-align: center;
 }
-main.page-vins .wine-header {
+main.nos-vins .wine-header {
   height: 300px;
   object-fit: cover;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  main.page-vins .wine-header {
+  main.nos-vins .wine-header {
     height: 150px;
   }
 }
-main.page-vins ul {
-  column-count: 2;
+main.nos-vins ul {
+  list-style: none;
   padding-left: 15px;
 }
 @media screen and (max-width: 768px) {
-  main.page-vins ul {
+  main.nos-vins ul {
     column-count: 1;
   }
 }
-main.page-vins ul li {
+main.nos-vins ul li {
   padding: 10px 5px;
 }
-main.page-vins .blancs li::marker {
-  color: #FFD359;
-}
-main.page-vins .roses li::marker {
-  color: #DB7093;
-}
-main.page-vins .rouges li::marker {
-  color: #6D071A;
-}
-main.page-vins .champagnes li::marker {
-  color: #FFD359;
+main.nos-vins ul li .fa {
+  font-size: 10px;
+  padding-right: 10px;
+  vertical-align: 2px;
 }
 main.page-contact .contact-form .wpcf7 {
   width: 100%;
@@ -333,55 +350,58 @@ main.page-contact .contact-form .wpcf7 label input, main.page-contact .contact-f
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  main.page-mets .plats {
+  main.nos-mets .plats, main.pour-offrir .plats {
     display: flex;
     order: 2;
   }
 }
-main.page-mets .plats img {
+main.nos-mets .plats img, main.pour-offrir .plats img {
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  main.page-mets .plats img {
+  main.nos-mets .plats img, main.pour-offrir .plats img {
     display: block;
     margin: 0 auto;
   }
 }
-main.page-mets .plats img:first-of-type {
+main.nos-mets .plats img:first-of-type, main.pour-offrir .plats img:first-of-type {
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
-  main.page-mets .plats img:first-of-type {
+  main.nos-mets .plats img:first-of-type, main.pour-offrir .plats img:first-of-type {
     margin-right: 10px;
   }
 }
 @media screen and (max-width: 768px) {
-  main.page-mets .intitules {
+  main.nos-mets .intitules, main.pour-offrir .intitules {
     order: 1;
   }
 }
-main.page-mets .intitules ul {
+main.nos-mets .intitules ul, main.pour-offrir .intitules ul {
   list-style: none;
   padding-left: 0;
 }
 @media screen and (max-width: 768px) {
-  main.page-mets .intitules ul {
+  main.nos-mets .intitules ul, main.pour-offrir .intitules ul {
     height: unset;
     margin: 10px 0;
   }
 }
-main.page-mets .intitules ul li {
+main.nos-mets .intitules ul li, main.pour-offrir .intitules ul li {
   padding: 20px 0;
   text-align: center;
   width: 50%;
 }
 @media screen and (max-width: 992px) {
-  main.page-mets .intitules ul li {
+  main.nos-mets .intitules ul li, main.pour-offrir .intitules ul li {
     width: 75%;
   }
 }
-main.page-mets .intitules ul li:not(:last-of-type) {
+main.nos-mets .intitules ul li:not(:last-of-type), main.pour-offrir .intitules ul li:not(:last-of-type) {
   border-bottom: 1px solid #6d071a;
+}
+main.pour-offrir .intitules ul li {
+  padding: 10px 0;
 }
 
 .top-banner {
@@ -455,6 +475,11 @@ main.page-mets .intitules ul li:not(:last-of-type) {
 @media screen and (max-width: 768px) {
   .top-banner .txt-content .content {
     font-size: 45px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .top-banner .txt-content .content {
+    font-size: 35px;
   }
 }
 

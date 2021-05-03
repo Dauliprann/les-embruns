@@ -49,7 +49,7 @@ main {
     }
   }
 
-  &.page-vins {
+  &.nos-vins {
     .wine-header {
       height: 300px;
       object-fit: cover;
@@ -60,7 +60,7 @@ main {
     }
 
     ul {
-      column-count: 2;
+      list-style: none;
       padding-left: 15px;
       @media screen and(max-width: 768px) {
         column-count: 1;
@@ -68,37 +68,10 @@ main {
 
       li {
         padding: 10px 5px;
-      }
-    }
-
-    .blancs {
-      li {
-        &::marker {
-          color: $color-white-wine;
-        }
-      }
-    }
-
-    .roses {
-      li {
-        &::marker {
-          color: $color-rose-wine;
-        }
-      }
-    }
-
-    .rouges {
-      li {
-        &::marker {
-          color: $color-red-wine;
-        }
-      }
-    }
-
-    .champagnes {
-      li {
-        &::marker {
-          color: $color-white-wine;
+        .fa {
+          font-size: 10px;
+          padding-right: 10px;
+          vertical-align: 2px;
         }
       }
     }
@@ -122,7 +95,8 @@ main {
       }
     }
   }
-  &.page-mets {
+  &.nos-mets,
+  &.pour-offrir {
     .plats {
       @media screen and (max-width: 768px) {
         display: flex;
@@ -163,6 +137,15 @@ main {
         }
         li:not(:last-of-type) {
           border-bottom: 1px solid $first-color;
+        }
+      }
+    }
+  }
+  &.pour-offrir {
+    .intitules {
+      ul {
+        li {
+          padding: 10px 0;
         }
       }
     }

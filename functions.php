@@ -141,6 +141,7 @@ add_action( 'widgets_init', 'les_embruns_widgets_init' );
  * Enqueue scripts and styles.
  */
 function les_embruns_scripts() {
+    wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/sass/bootstrap.css', array(), _S_VERSION );
 	wp_enqueue_style( 'les-embruns-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'les-embruns-style', 'rtl', 'replace' );
 

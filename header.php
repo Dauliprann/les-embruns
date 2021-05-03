@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">-->
     <!--    <link rel="stylesheet" href="--><?php //echo get_stylesheet_directory_uri(); ?><!--/style.css">-->
     <link rel="shortcut icon" type="image/ico" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
     <?php wp_head(); ?>
@@ -40,15 +40,11 @@
 </header>
 <section class="top-banner<?php if (is_front_page()) { ?> home<?php } else { ?> page<?php } ?>">
     <div class="bg-img"
-         style="background: url('<?php if (is_front_page()) {
-             echo get_field("home_bg_img")["url"];
-         } else {
-             echo get_field('page_bg_img', get_the_ID())['url'];
-         } ?>') center;background-size: cover">
+         style="background: url('<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>') center;background-size: cover">
         <span class="overlay-red"></span>
         <div class="container h-100">
             <div class="txt-content h-100 d-flex flex-column align-items-center justify-content-center">
-                <div class="content text-center<?php if (is_front_page()) { ?> mb-md-5<?php } ?>">
+                <div class="content text-center<?php if (is_front_page()) { ?> mb-3 mb-md-5<?php } ?>">
                     <?php if (is_front_page()) {
                         the_field('home_txt');
                     } else {
@@ -63,4 +59,7 @@
     </div>
 </section>
 
-<main>
+<?php global $post;
+$post_slug = $post->post_name; ?>
+
+<main class="<?php echo $post_slug; ?>">

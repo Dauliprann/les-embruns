@@ -1,4 +1,4 @@
-<section class="my-5">
+<section class="my-3 my-md-5">
     <div class="container">
         <div class="row">
             <?php if (get_sub_field('place_img')=='gauche') { ?>

@@ -45,3 +45,7 @@ img {
 .bg-red {
   background-color: rgba($first-color, 0.15);
 }
+
+.mobmenu-content li:active {
+  border-bottom: 1px solid $first-color !important;
+}
