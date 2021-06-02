@@ -17,9 +17,9 @@
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_small_white.png" alt="Logo pied de page">
         <a href="https://www.facebook.com/lesembrunsiledere/"><i class="fa fa-facebook"></i></a>
         <div class="contact-footer">
-            <p>Restaurant Les Embruns</p>
-            <p>6 Rue Chay Morin 17410 Saint-Martin-de-Ré</p>
-            <p>05 46 66 46 31</p>
+            <p><?php the_field('company_name','options'); ?></p>
+            <p><?php the_field('address_1','options'); ?> <?php the_field('address_2','options'); ?></p>
+            <p><?php the_field('phone','options'); ?></p>
         </div>
         <?php wp_nav_menu(array(
             'theme_location' => 'menu-footer',

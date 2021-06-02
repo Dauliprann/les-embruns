@@ -75,6 +75,15 @@ img {
   border-bottom: 1px solid #6d071a !important;
 }
 
+input, textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  max-width: 100%;
+  padding: 5px;
+  width: 100%;
+}
+
 button, input[type=submit], a.button {
   background-color: #6d071a;
   border: 2px solid #6d071a;
@@ -159,14 +168,6 @@ button:hover, button:active, button:focus, input[type=submit]:hover, input[type=
 --------------------------------------------------------------*/
 .contact_form label {
   max-width: 100%;
-  width: 100%;
-}
-.contact_form label input, .contact_form label textarea {
-  border: none;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  max-width: 100%;
-  padding: 5px;
   width: 100%;
 }
 
@@ -273,6 +274,9 @@ header .navbar ul li.link-booking:hover {
   background-color: #37030D;
 }
 
+main {
+  margin-top: 1rem;
+}
 main .pleasure .gifts .item {
   background-size: cover;
   border: 2px solid #6d071a;
