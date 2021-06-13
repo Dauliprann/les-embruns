@@ -46,7 +46,7 @@ foreach ($wine_types as $wine_type) { ?>
                     <ul class="row">
                         <?php while ($wp_query->have_posts()) {
                             $wp_query->the_post(); ?>
-                            <li class="col-6"><i class="fa fa-circle" style="color:<?php echo get_field('bullet_color',$wine_type->taxonomy.'_'.$wine_type->term_id) ?>;"></i><?php the_title() ?><?php if (!empty(get_field('wine_prod', get_the_ID()))) { echo ', '.get_field('wine_prod', get_the_ID()); } ?><?php if (!empty(get_field('wine_year', get_the_ID()))) { echo ', '.get_field('wine_year', get_the_ID()); } ?></li>
+                            <li class="col-md-6"><i class="fa fa-circle" style="color:<?php echo get_field('bullet_color',$wine_type->taxonomy.'_'.$wine_type->term_id) ?>;"></i><?php the_title() ?><?php if (!empty(get_field('wine_prod', get_the_ID()))) { echo ', '.get_field('wine_prod', get_the_ID()); } ?><?php if (!empty(get_field('wine_year', get_the_ID()))) { echo ', '.get_field('wine_year', get_the_ID()); } ?></li>
                         <?php } ?>
                     </ul>
                 </div>

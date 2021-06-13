@@ -14,6 +14,12 @@ $args = array(
 $my_query = new WP_Query($args);
 ?>
 
+<section>
+    <div class="container">
+        <?php the_content(); ?>
+    </div>
+</section>
+
 <?php if ($my_query->have_posts()) :
     while ($my_query->have_posts()) : $my_query->the_post(); ?>
         <section class="my-4 py-md-3">

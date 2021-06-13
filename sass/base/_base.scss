@@ -58,6 +58,12 @@ input, textarea {
   padding: 5px;
   resize: none;
   width: 100%;
+  &:focus-visible {
+    outline: 1px solid $first-color;
+  }
+  &.input-button {
+    width: max-content;
+  }
 }
 
 .grecaptcha-badge {

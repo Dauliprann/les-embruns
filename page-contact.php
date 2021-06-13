@@ -27,7 +27,7 @@ get_header();
         <div class="row">
             <?php if (have_rows('partenaires')) :
                 while (have_rows('partenaires')) : the_row(); ?>
-                    <div class="col-4 col-md-2 d-flex align-items-center justify-content-center mb-3"><a href="<?php the_sub_field('link'); ?>"><img src="<?php echo get_sub_field('logo')['url']; ?>" alt=""></a></div>
+                    <div class="col-4 col-md-2 d-flex align-items-center justify-content-center mb-3"><a target="_blank" href="<?php the_sub_field('link'); ?>"><img src="<?php echo get_sub_field('logo')['url']; ?>" alt=""></a></div>
                 <?php endwhile;
             endif; ?>
         </div>

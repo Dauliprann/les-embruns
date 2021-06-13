@@ -81,7 +81,18 @@ input, textarea {
   border-left: 1px solid black;
   max-width: 100%;
   padding: 5px;
+  resize: none;
   width: 100%;
+}
+input:focus-visible, textarea:focus-visible {
+  outline: 1px solid #6d071a;
+}
+input.input-button, textarea.input-button {
+  width: max-content;
+}
+
+.grecaptcha-badge {
+  z-index: 100;
 }
 
 button, input[type=submit], a.button {
@@ -118,6 +129,7 @@ button:hover, button:active, button:focus, input[type=submit]:hover, input[type=
 }
 
 .title, .title_h4, .title_h3, .title_h2 {
+  cursor: default;
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -180,7 +192,6 @@ footer a {
   display: block;
   margin: 0 auto;
   transition: 0.3s ease all;
-  width: -webkit-max-content;
   width: max-content;
 }
 footer a:hover {
@@ -278,13 +289,13 @@ main {
   margin-top: 1rem;
 }
 main .pleasure .gifts .item {
-  background-size: cover;
-  border: 2px solid #6d071a;
+  background-size: cover !important;
   color: white;
   filter: none;
-  height: 170px;
+  height: 150px;
   text-decoration: none;
   transition: 0.3s ease all;
+  width: 100%;
 }
 main .pleasure .gifts .item div {
   background-color: rgba(109, 7, 26, 0.7);
@@ -294,12 +305,6 @@ main .pleasure .gifts .item div {
 main .pleasure .gifts .item:hover {
   text-decoration: none;
   filter: grayscale(0.7);
-}
-main .pleasure .gifts .item.cheque {
-  background-image: url("images/photo-cheque.JPG");
-}
-main .pleasure .gifts .item.coffret {
-  background-image: url("images/photo-coffret.JPG");
 }
 main .engagements .item img {
   display: block;
@@ -418,11 +423,11 @@ main.pour-offrir .intitules ul li {
   }
 }
 .top-banner.home {
-  height: 85vh;
+  height: 600px;
 }
 @media screen and (max-width: 768px) {
   .top-banner.home {
-    height: 50vh;
+    height: 230px;
   }
 }
 .top-banner .bg-img {
@@ -436,24 +441,6 @@ main.pour-offrir .intitules ul li {
   .top-banner.page {
     height: 20vh;
   }
-}
-.top-banner.page.-resto .bg-img {
-  background: url("images/photo-top-banner-resto.jpg") center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-.top-banner.page.-mets .bg-img {
-  background: url("images/photo-top-banner-mets.JPG") center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-.top-banner.page.-vins .bg-img {
-  background: url("images/photo-top-banner-vins.jpg") center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
 }
 .top-banner .overlay-red {
   background-color: rgba(109, 7, 26, 0.7);

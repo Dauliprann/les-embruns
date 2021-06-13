@@ -3,13 +3,13 @@ main {
   .pleasure {
     .gifts {
       .item {
-        background-size: cover;
-        border: 2px solid $first-color;
+        background-size: cover !important;
         color: white;
         filter: none;
-        height: 170px;
+        height: 150px;
         text-decoration: none;
         transition: $transition;
+        width: 100%;
 
         div {
           background-color: rgba($first-color, 0.7);
@@ -20,14 +20,6 @@ main {
         &:hover {
           text-decoration: none;
           filter: grayscale(0.7);
-        }
-
-        &.cheque {
-          background-image: url("images/photo-cheque.JPG");
-        }
-
-        &.coffret {
-          background-image: url("images/photo-coffret.JPG");
         }
       }
     }

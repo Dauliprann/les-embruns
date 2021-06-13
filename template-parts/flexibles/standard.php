@@ -1,4 +1,4 @@
-<section class="my-4 py-5<?php if (get_sub_field('bg_pink')) { ?> bg-red<?php }; ?>">
+<section class="my-2 py-4 my-md-4 py-md-5<?php if (get_sub_field('bg_pink')) { ?> bg-red<?php }; ?>">
     <div class="container">
         <?php if (get_sub_field('title_type') == 0) { ?>
             <h3 class="title_h3 text-center"><?php the_sub_field('title'); ?></h3>

@@ -15,7 +15,7 @@
 <footer>
     <div class="container text-center white">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_small_white.png" alt="Logo pied de page">
-        <a href="https://www.facebook.com/lesembrunsiledere/"><i class="fa fa-facebook"></i></a>
+        <a href="<?php the_field('fb_link','options'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
         <div class="contact-footer">
             <p><?php the_field('company_name','options'); ?></p>
             <p><?php the_field('address_1','options'); ?> <?php the_field('address_2','options'); ?></p>
